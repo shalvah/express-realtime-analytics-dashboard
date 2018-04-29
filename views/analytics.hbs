@@ -97,3 +97,14 @@
         data: window.analytics
     });
 </script>
+
+<script src="https://js.pusher.com/4.2/pusher.min.js"></script>
+<script>
+    const pusher = new Pusher('your-app-key', { cluster: 'your-app-cluster'});
+    pusher.subscribe('analytics')
+            .bind('updated', (data) => {
+                Object.keys(data.analytics).forEach(stat => {
+                    window.analytics[stat] = data.analytics[stat];
+                })
+            })
+</script>
