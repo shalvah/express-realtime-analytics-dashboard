@@ -29,5 +29,9 @@ app.set('views', path.join(__dirname, 'views'));
 require('hbs').registerHelper('toJson', data => JSON.stringify(data));
 app.set('view engine', 'hbs');
 
+app.get('/analytics', (req, res, next) => {
+    require('./analytics_service').getAnalytics()
+        .then(analytics => res.render('analytics', { analytics }));
+});
 
 module.exports = app;
