@@ -9,7 +9,7 @@ module.exports = {
             {
                 $group: {
                     _id: {url: '$url', method: '$method'},
-                    responseTime: {$avg: '$response_time'},
+                    responseTime: {$avg: '$responseTime'},
                     numberOfRequests: {$sum: 1},
                 }
             }
