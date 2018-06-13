@@ -1,6 +1,8 @@
 # express-realtime-analytics-dashboard
 Express app that tracks all requests and displays analytics in realtime in a dashboard
 
+[View tutorial](https://pusher.com/tutorials/realtime-analytics-dashboard-express)
+
 ## Prerequisites
 - Node.js 8.10.0 or higher
 - MongoDB 3.4 or greater
